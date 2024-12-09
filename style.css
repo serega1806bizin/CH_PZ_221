@@ -7,6 +7,42 @@ h1, body {
   animation: Gradient 15s ease infinite;
 }
 
+@media (max-width: 768px) { /* Условие для мобильных устройств */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота экрана для центрирования */
+    margin: 0;
+  }
+
+  .content {
+    display: none; /* Скрываем все блоки контента */
+  }
+
+  .mobile-message {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8d7da; /* Легкий фоновый цвет для выделения */
+    color: #721c24; /* Цвет текста */
+    border: 1px solid #f5c6cb; /* Рамка */
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-message {
+    display: none; /* Скрываем сообщение на ПК */
+  }
+
+  .content {
+    display: block; /* Показываем основной контент */
+  }
+}
+
+
 * {
   padding: 0;
   margin: 0;
